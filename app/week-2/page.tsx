@@ -1,4 +1,4 @@
-import StudentInfo from "@/components/student.info"
+import StudentInfo from "@/app/week-2/student.info"
 
 export default function Page() {
     return (
