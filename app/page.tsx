@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,6 +9,8 @@ export default function Home() {
       <Link href="/week-3">Go to Week 3</Link>
       <br></br>
       <Link href="/week-4">Go to Week 4</Link>
+      <br></br>
+      <Link href="/week-5">Go to Week 5</Link>
     </main>
-  )
+  );
 }
