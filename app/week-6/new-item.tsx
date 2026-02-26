@@ -2,20 +2,18 @@
 
 import React, { useState } from "react";
 
-type NewItemProps = {
-  name: string;
-  quantity: number;
-  category: string;
-};
-
 export default function NewItem({
-  onAddItem,
+  handleAddItem,
 }: {
-  onAddItem: (newItem: NewItemProps) => void;
+  handleAddItem: (newItem: {
+    name: string;
+    quantity: number;
+    category: string;
+  }) => void;
 }) {
   const [name, setName] = useState<string>("");
   const [quantity, setQuantity] = useState<number>(1);
-  const [category, setCategory] = useState<string>("Produce");
+  const [category, setCategory] = useState<string>("produce");
   const [nameTouched, setNameTouched] = useState<boolean>(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -28,7 +26,7 @@ export default function NewItem({
       category,
     };
 
-    onAddItem(item);
+    handleAddItem(item);
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -85,8 +83,8 @@ export default function NewItem({
             <option value="dairy">Dairy</option>
             <option value="bakery">Bakery</option>
             <option value="meat">Produce</option>
-            <option value="frozen-foods">Frozen Foods</option>
-            <option value="canned-goods">Canned Goods</option>
+            <option value="frozen foods">Frozen Foods</option>
+            <option value="canned goods">Canned Goods</option>
             <option value="dry-goods">Dry Goods</option>
             <option value="beverages">Beverages</option>
             <option value="snacks">Snacks</option>
