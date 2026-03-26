@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "app/week-8/layout.js",
+    "app/week-8/_utils/auth-context.js"
   ],
   "exclude": ["node_modules"]
 }
